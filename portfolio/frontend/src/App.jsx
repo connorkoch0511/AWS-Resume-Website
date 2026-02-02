@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 export default function App() {
   const [theme, setTheme] = useState("light");
@@ -16,6 +17,7 @@ export default function App() {
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         <button
@@ -31,6 +33,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
