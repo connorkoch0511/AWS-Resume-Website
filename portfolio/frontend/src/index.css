@@ -7,6 +7,7 @@
   --text: #111827;
   --text-muted: #4b5563;
   --accent: #2563eb;
+  --bg-input: #ffffff;
 }
 
 body[data-theme="dark"] {
@@ -17,6 +18,7 @@ body[data-theme="dark"] {
   --text: #e5e7eb;
   --text-muted: #94a3b8;
   --accent: #38bdf8;
+  --bg-input: #1f2933;
 }
 
 /* ===== GLOBAL ===== */
