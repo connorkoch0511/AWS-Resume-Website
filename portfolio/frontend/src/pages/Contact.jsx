@@ -1,20 +1,39 @@
+import { useState } from "react";
+
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
     const form = e.target;
 
-    await fetch("https://3qo252mmdj.execute-api.us-east-1.amazonaws.com/prod/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value,
-      }),
-    });
+    try {
+      const res = await fetch(
+        "https://3qo252mmdj.execute-api.us-east-1.amazonaws.com/prod/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+          }),
+        }
+      );
 
-    form.reset();
-    alert("Message sent!");
+      if (!res.ok) throw new Error("Request failed");
+
+      form.reset();
+      setStatus("success");
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -60,5 +79,4 @@ export default function Contact() {
       </form>
     </div>
   );
-
 }

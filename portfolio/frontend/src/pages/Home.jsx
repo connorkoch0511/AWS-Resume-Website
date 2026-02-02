@@ -22,7 +22,7 @@ export default function Home() {
         <h2>Education</h2>
 
         <div className="education-card">
-          <h3>California State University, Long Beach</h3>
+          <h3>California State University of Long Beach</h3>
           <p>Bachelor of Science in Computer Science</p>
           <p className="education-dates">August 2019 – May 2023</p>
         </div>
