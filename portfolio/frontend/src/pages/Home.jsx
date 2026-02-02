@@ -19,6 +19,16 @@ export default function Home() {
       <Experience />
 
       <section>
+        <h2>Education</h2>
+
+        <div className="education">
+          <h3>California State University, Long Beach</h3>
+          <p>Bachelor of Science in Computer Science</p>
+          <p className="education-dates">August 2019 – May 2023</p>
+        </div>
+      </section>
+
+      <section>
         <h2>Skills</h2>
         <ul className="skills">
           <li>AWS (Lambda, API Gateway, S3, CloudFront, IAM)</li>
