@@ -180,20 +180,34 @@ body {
   font-weight: 500;
 }
 
+/* Contact form inputs */
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;
-  border-radius: 6px;
+  padding: 0.75rem 0.85rem;
+  border-radius: 8px;
+
   border: 1px solid var(--border-color);
-  background: var(--bg-secondary);
+  background-color: var(--bg-input, var(--bg-secondary));
   color: var(--text-primary);
+
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+/* Make inputs clearly visible */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Strong focus state (this matters a lot) */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.25);
 }
+
 
 .contact-form button {
   margin-top: 1rem;
