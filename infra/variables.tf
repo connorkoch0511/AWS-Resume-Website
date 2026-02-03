@@ -27,3 +27,8 @@ variable "ses_from_email" {
 variable "ses_to_email" {
   type = string
 }
+
+variable "cloudfront_domain_name" {
+  type = string
+  default = "d2k3tmmmuxn4oo.cloudfront.net"
+}
