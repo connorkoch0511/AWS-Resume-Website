@@ -37,6 +37,15 @@ export default function Experience() {
                 code through Azure DevOps repositories and supporting production
                 systems.
             </li>
+            <li>
+                Designed and developed a Python-based document ingestion pipeline deployed
+                on Oracle Cloud Infrastructure (OCI) Compute, enabling automated processing
+                and indexing of enterprise documents.
+            </li>
+            <li>
+                Implemented multi-format document conversion (Word, Excel, PDF) into
+                OpenSearch-compatible JSON for high-volume bulk indexing.
+            </li>
         </ul>
       </div>
     </section>
