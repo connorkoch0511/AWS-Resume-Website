@@ -35,6 +35,8 @@ func init() {
 
 func handler(ctx context.Context, req events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPResponse, error) {
 
+	fmt.Println("HANDLER INVOKED")
+
 	// Handle OPTIONS preflight for CORS
 	if req.RequestContext.HTTP.Method == "OPTIONS" {
 		return events.APIGatewayV2HTTPResponse{
