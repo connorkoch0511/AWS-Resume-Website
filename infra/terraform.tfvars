@@ -1,0 +1,5 @@
+bucket_name             = "ckoch-0511-dev-bucket"
+cloudfront_distribution_id = "E1W5ONHWPC7QO2"
+contact_table_name      = "portfolio-contact-messages"
+ses_from_email          = "connorrkoch@gmail.com"
+ses_to_email            = "connor.koch@yahoo.com"
