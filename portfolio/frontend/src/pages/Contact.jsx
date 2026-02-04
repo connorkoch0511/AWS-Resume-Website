@@ -13,7 +13,7 @@ export default function Contact() {
 
     try {
       const res = await fetch(
-        "https://3qo252mmdj.execute-api.us-east-1.amazonaws.com/prod/contact-api",
+        "https://3qo252mmdj.execute-api.us-east-1.amazonaws.com/prod/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
