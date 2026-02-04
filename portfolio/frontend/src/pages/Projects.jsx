@@ -4,7 +4,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("https://bl0mli0hbf.execute-api.us-east-1.amazonaws.com/prod/projects")
+    fetch("https://3qo252mmdj.execute-api.us-east-1.amazonaws.com/prod/projects")
       .then((res) => res.json())
       .then(setProjects)
       .catch(console.error);
