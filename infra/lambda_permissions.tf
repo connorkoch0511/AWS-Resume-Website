@@ -1,7 +1,5 @@
-data "aws_caller_identity" "current" {}
-
 resource "aws_lambda_permission" "apigw_projects_get" {
-  statement_id  = "apigw-3qo252mmdj-get-projects"
+  statement_id  = "AllowExecutionFromAPIGatewayGetProjects"
   action        = "lambda:InvokeFunction"
   function_name = "projects-api"
   principal     = "apigateway.amazonaws.com"
@@ -10,7 +8,7 @@ resource "aws_lambda_permission" "apigw_projects_get" {
 }
 
 resource "aws_lambda_permission" "apigw_contact_post" {
-  statement_id  = "apigw-3qo252mmdj-post-contact"
+  statement_id  = "AllowExecutionFromAPIGatewayPostContact"
   action        = "lambda:InvokeFunction"
   function_name = "contact-api"
   principal     = "apigateway.amazonaws.com"
