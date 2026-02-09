@@ -10,6 +10,11 @@
   --text-muted: #4b5563;
   --accent: #2563eb;
   --bg-input: #ffffff;
+  /* aliases so older names still work */
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --border-color: var(--border);
+  --bg-secondary: var(--bg-card);
 }
 
 body[data-theme="dark"] {
@@ -21,6 +26,10 @@ body[data-theme="dark"] {
   --text-muted: #94a3b8;
   --accent: #38bdf8;
   --bg-input: #1f2933;
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --border-color: var(--border);
+  --bg-secondary: var(--bg-card);
 }
 
 /* ===== GLOBAL ===== */
@@ -165,7 +174,7 @@ body {
 
 .contact-subtitle {
   margin-bottom: 2rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
 .contact-form {
@@ -188,28 +197,29 @@ body {
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem 0.85rem;
-  border-radius: 8px;
+  border-radius: 10px;
 
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-input, var(--bg-secondary));
-  color: var(--text-primary);
+  border: 1px solid var(--border);
+  background: var(--bg-input);
+  color: var(--text);
 
   font-size: 0.95rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 /* Make inputs clearly visible */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  opacity: 0.9;
 }
 
 /* Strong focus state (this matters a lot) */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #646cff;
-  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
 
