@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="container">
       <section className="hero">
-        <h1 className="text-red-500">Connor Koch</h1>
+        <h1>Connor Koch</h1>
         <p className="subtitle">
           Software Engineer · AWS · Go · React
         </p>
