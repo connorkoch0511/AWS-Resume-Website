@@ -9,9 +9,13 @@ import (
 )
 
 type Project struct {
-	ID          string `json:"id"`
-	Name        string `json:"name"`
-	Description string `json:"description"`
+	ID          string   `json:"id"`
+	Name        string   `json:"name"`
+	Description string   `json:"description"`
+	Tags        []string `json:"tags,omitempty"`
+	LiveUrl     string   `json:"liveUrl,omitempty"`
+	RepoUrl     string   `json:"repoUrl,omitempty"`
+	CodeUrl     string   `json:"codeUrl,omitempty"`
 }
 
 func handler(ctx context.Context) (events.APIGatewayV2HTTPResponse, error) {
@@ -20,6 +24,10 @@ func handler(ctx context.Context) (events.APIGatewayV2HTTPResponse, error) {
 			ID:          "aws-portfolio",
 			Name:        "AWS Serverless Portfolio",
 			Description: "React frontend on S3 + CloudFront with Go Lambda backend",
+			Tags:        []string{"AWS", "Lambda", "API Gateway", "DynamoDB", "SES", "Terraform", "React", "Go"},
+			LiveUrl:     "https://d2k3tmmmuxn4oo.cloudfront.net",
+			RepoUrl:     "https://github.com/connorkoch0511/AWS-Resume-Website",
+			CodeUrl:     "https://github.com/connorkoch0511/AWS-Resume-Website/tree/main/portfolio",
 		},
 	}
 
