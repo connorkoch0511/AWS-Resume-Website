@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ProjectDetail from "./pages/ProjectDetail";
 
 export default function App() {
   const [theme, setTheme] = useState("light");
@@ -22,9 +23,7 @@ export default function App() {
 
         <button
           className="theme-toggle"
-          onClick={() =>
-            setTheme(theme === "light" ? "dark" : "light")
-          }
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "light" ? "🌙 Dark" : "☀️ Light"}
         </button>
@@ -33,6 +32,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
