@@ -410,3 +410,50 @@ body {
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
+/* ===== RETRO THEME LAYER ===== */
+:root {
+  --retro-glow: 0 0 12px color-mix(in srgb, var(--accent) 40%, transparent);
+  --retro-grid: color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+.retro-bg {
+  position: relative;
+}
+.retro-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--retro-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--retro-grid) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.35;
+}
+
+.retro-card {
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+  box-shadow: var(--retro-glow);
+}
+
+.retro-title {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.retro-scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.10),
+    rgba(0,0,0,0.10) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+}
