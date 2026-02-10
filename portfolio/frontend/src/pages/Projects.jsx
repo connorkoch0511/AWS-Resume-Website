@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 const API_BASE = "https://3qo252mmdj.execute-api.us-east-1.amazonaws.com/prod";
 
@@ -57,16 +58,18 @@ export default function Projects() {
         </button>
       </div>
 
-      {apiTest.output && (
-        <pre className="code-block">{apiTest.output}</pre>
-      )}
+      {apiTest.output && <pre className="code-block">{apiTest.output}</pre>}
 
       <div className="project-grid">
         {merged.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-card-top">
               <div>
-                <h3>{project.name}</h3>
+                <h3>
+                  <Link to={`/projects/${project.id}`} style={{ color: "inherit", textDecoration: "none" }}>
+                    {project.name}
+                  </Link>
+                </h3>
                 <p className="project-desc">{project.description}</p>
               </div>
               <span className="pill">{project.id}</span>
@@ -75,14 +78,16 @@ export default function Projects() {
             {project.meta?.tags?.length ? (
               <div className="tag-row">
                 {project.meta.tags.map((t) => (
-                  <span key={t} className="tag">
-                    {t}
-                  </span>
+                  <span key={t} className="tag">{t}</span>
                 ))}
               </div>
             ) : null}
 
             <div className="btn-row">
+              <Link className="btn btn-secondary" to={`/projects/${project.id}`}>
+                Details
+              </Link>
+
               {project.meta?.liveUrl && (
                 <a className="btn btn-primary" href={project.meta.liveUrl} target="_blank" rel="noreferrer">
                   Live Demo
