@@ -62,7 +62,7 @@ export default function Projects() {
 
       <div className="project-grid">
         {merged.map((project) => (
-          <div key={project.id} className="project-card">
+          <div key={project.id} className="project-card retro-card">
             <div className="project-card-top">
               <div>
                 <h3>
