@@ -29,6 +29,15 @@ func handler(ctx context.Context) (events.APIGatewayV2HTTPResponse, error) {
 			RepoUrl:     "https://github.com/connorkoch0511/AWS-Resume-Website",
 			CodeUrl:     "https://github.com/connorkoch0511/AWS-Resume-Website/tree/main/portfolio",
 		},
+		{
+			ID:          "mist",
+			Name:        "Mist",
+			Description: "Serverless game discovery + collections app (AWS + React).",
+			Tags:        []string{"AWS", "CloudFront", "S3", "API Gateway", "Lambda", "DynamoDB", "Secrets Manager", "React", "Tailwind"},
+			LiveUrl:     "https://d2l61hze39nve3.cloudfront.net/",
+			RepoUrl:     "https://github.com/connorkoch0511/RAWG-Steam-Game-Discovery-Hub",
+			CodeUrl:     "https://github.com/connorkoch0511/RAWG-Steam-Game-Discovery-Hub/tree/main/portfolio",
+		},
 	}
 
 	body, _ := json.Marshal(projects)
