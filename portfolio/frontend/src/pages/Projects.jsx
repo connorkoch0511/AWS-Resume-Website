@@ -75,9 +75,9 @@ export default function Projects() {
               <span className="pill">{project.id}</span>
             </div>
 
-            {project.meta?.tags?.length ? (
+            {(project.meta?.tags || project.tags)?.length ? (
               <div className="tag-row">
-                {project.meta.tags.map((t) => (
+                {(project.meta?.tags || project.tags).map((t) => (
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
@@ -88,18 +88,18 @@ export default function Projects() {
                 Details
               </Link>
 
-              {project.meta?.liveUrl && (
-                <a className="btn btn-primary" href={project.meta.liveUrl} target="_blank" rel="noreferrer">
+              {(project.meta?.liveUrl || project.liveUrl) && (
+                <a className="btn btn-primary" href={project.meta?.liveUrl || project.liveUrl} target="_blank" rel="noreferrer">
                   Live Demo
                 </a>
               )}
-              {project.meta?.repoUrl && (
-                <a className="btn btn-secondary" href={project.meta.repoUrl} target="_blank" rel="noreferrer">
+              {(project.meta?.repoUrl || project.repoUrl) && (
+                <a className="btn btn-secondary" href={project.meta?.repoUrl || project.repoUrl} target="_blank" rel="noreferrer">
                   GitHub Repo
                 </a>
               )}
-              {project.meta?.codeUrl && (
-                <a className="btn btn-secondary" href={project.meta.codeUrl} target="_blank" rel="noreferrer">
+              {(project.meta?.codeUrl || project.codeUrl) && (
+                <a className="btn btn-secondary" href={project.meta?.codeUrl || project.codeUrl} target="_blank" rel="noreferrer">
                   View Code
                 </a>
               )}
