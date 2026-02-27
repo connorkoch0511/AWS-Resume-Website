@@ -21,19 +21,19 @@ type Project struct {
 func handler(ctx context.Context) (events.APIGatewayV2HTTPResponse, error) {
 	projects := []Project{
 		{
-			ID:          "aws-portfolio",
-			Name:        "AWS Serverless Portfolio",
-			Description: "React frontend on S3 + CloudFront with Go Lambda backend",
-			Tags:        []string{"AWS", "Lambda", "API Gateway", "DynamoDB", "SES", "Terraform", "React", "Go"},
-			LiveUrl:     "https://d2k3tmmmuxn4oo.cloudfront.net",
-			RepoUrl:     "https://github.com/connorkoch0511/AWS-Resume-Website",
-			CodeUrl:     "https://github.com/connorkoch0511/AWS-Resume-Website/tree/main/portfolio",
+			ID:          "perfectpick",
+			Name:        "PerfectPick",
+			Description: "Serverless fantasy football mock draft simulator with a live Big Board, pick timer, and automated drafting, built with React and AWS.",
+			Tags:        []string{"AWS", "Lambda", "API Gateway", "DynamoDB", "Terraform", "React", "Tailwind CSS", "JavaScript"},
+			LiveUrl:     "https://d2kf4b52rvabfv.cloudfront.net/",
+			RepoUrl:     "https://github.com/connorkoch0511/sports-mock-draft",
+			CodeUrl:     "https://github.com/connorkoch0511/sports-mock-draft",
 		},
 		{
 			ID:          "mist",
 			Name:        "Mist",
 			Description: "Serverless game discovery + collections app (AWS + React).",
-			Tags:        []string{"AWS", "CloudFront", "S3", "API Gateway", "Lambda", "DynamoDB", "Secrets Manager", "React", "Tailwind"},
+			Tags:        []string{"AWS", "CloudFront", "S3", "API Gateway", "Lambda", "DynamoDB", "Secrets Manager", "React", "Tailwind CSS", "JavaScript"},
 			LiveUrl:     "https://d2l61hze39nve3.cloudfront.net/",
 			RepoUrl:     "https://github.com/connorkoch0511/RAWG-Steam-Game-Discovery-Hub",
 			CodeUrl:     "https://github.com/connorkoch0511/RAWG-Steam-Game-Discovery-Hub/tree/main/portfolio",
