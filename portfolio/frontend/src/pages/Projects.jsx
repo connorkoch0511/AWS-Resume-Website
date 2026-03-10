@@ -43,7 +43,7 @@ export default function Projects() {
     <div className="container">
       <div className="projects-header">
         <div>
-          <h1>Projects</h1>
+          <h1>Playbook</h1>
           <p className="projects-subtitle">
             Live demos, source code, and AWS-backed features you can try.
           </p>

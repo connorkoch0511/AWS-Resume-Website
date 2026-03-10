@@ -14,12 +14,31 @@ export default function Home() {
           development. Experienced in building serverless applications using
           Go, React, AWS Lambda, API Gateway, and CloudFront.
         </p>
+
+        <div className="hero-stats">
+          <div className="hero-stat">
+            <span className="hero-stat-label">POSITION</span>
+            <span className="hero-stat-value">ENG</span>
+          </div>
+          <div className="hero-stat">
+            <span className="hero-stat-label">EXPERIENCE</span>
+            <span className="hero-stat-value">2+ YRS</span>
+          </div>
+          <div className="hero-stat">
+            <span className="hero-stat-label">TEAM</span>
+            <span className="hero-stat-value">AWS</span>
+          </div>
+          <div className="hero-stat">
+            <span className="hero-stat-label">STATUS</span>
+            <span className="hero-stat-value">ACTIVE</span>
+          </div>
+        </div>
       </section>
 
       <Experience />
 
-      <section>
-        <h2>Education</h2>
+      <section className="education">
+        <h2>Training Grounds</h2>
 
         <div className="education-card">
           <h3>California State University of Long Beach</h3>
@@ -29,7 +48,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2>Skills</h2>
+        <h2>Player Stats</h2>
         <ul className="skills">
           <li>AWS (Lambda, API Gateway, S3, CloudFront, IAM)</li>
           <li>Go (Golang)</li>

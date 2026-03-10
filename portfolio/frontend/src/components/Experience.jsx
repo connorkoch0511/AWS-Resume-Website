@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
     <section>
-      <h2>Experience</h2>
+      <h2>Game Log</h2>
 
       <div className="experience-card">
         <h3>Oracle Software Developer</h3>

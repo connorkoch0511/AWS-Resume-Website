@@ -38,7 +38,7 @@ export default function Contact() {
 
   return (
     <div className="container contact-page">
-      <h1>Contact</h1>
+      <h1>Call an Audible</h1>
       <p className="contact-subtitle">
         Feel free to reach out — I’m always open to new opportunities and conversations.
       </p>
