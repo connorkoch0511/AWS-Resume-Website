@@ -99,11 +99,6 @@ export default function Projects() {
                   GitHub Repo
                 </a>
               )}
-              {(project.meta?.codeUrl || project.codeUrl) && (
-                <a className="btn btn-secondary" href={project.meta?.codeUrl || project.codeUrl} target="_blank" rel="noreferrer">
-                  View Code
-                </a>
-              )}
             </div>
           </div>
         ))}

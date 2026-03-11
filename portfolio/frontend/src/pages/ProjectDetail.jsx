@@ -106,11 +106,6 @@ export default function ProjectDetail() {
             GitHub Repo
           </a>
         )}
-        {project.meta?.codeUrl && (
-          <a className="btn btn-secondary" href={project.meta.codeUrl} target="_blank" rel="noreferrer">
-            View Code
-          </a>
-        )}
         <button className="btn btn-secondary" onClick={testProjectsApi} disabled={apiTest.loading}>
           {apiTest.loading ? "Testing..." : "Try Projects API"}
         </button>
