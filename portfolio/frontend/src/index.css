@@ -652,6 +652,143 @@ section + section {
 }
 
 /* ============================================================
+   RBI BASEBALL THEME — Home page
+   ============================================================ */
+.page-baseball {
+  /* navy pinstripe background */
+  background-color: #05051e;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 38px,
+    rgba(255, 255, 255, 0.03) 38px,
+    rgba(255, 255, 255, 0.03) 40px
+  );
+  min-height: 100vh;
+  position: relative;
+}
+
+.page-baseball .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Inning indicator */
+.baseball-inning {
+  font-family: var(--pixel-font);
+  font-size: 0.45rem;
+  color: #ffd700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+/* Headings */
+.page-baseball h1 {
+  color: #ffffff;
+  text-shadow: 3px 3px 0 #00008b, 5px 5px 0 #000;
+  font-size: 1.35rem;
+}
+
+.page-baseball h2 {
+  color: #ffd700;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.page-baseball h2::before { color: #ffffff; }
+.page-baseball h3         { color: #ffffff; }
+
+.page-baseball .subtitle {
+  color: #aaaadd;
+}
+
+.page-baseball .description {
+  border-left-color: #ffd700;
+  color: #ccccee;
+}
+
+/* R/H/E Scoreboard */
+.scoreboard-table {
+  border-collapse: collapse;
+  margin-top: 1.75rem;
+  font-family: var(--pixel-font);
+  font-size: 0.42rem;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  padding: 0.55rem 1rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.scoreboard-table th {
+  background: #ffffff;
+  color: #000000;
+  letter-spacing: 0.1em;
+}
+
+.scoreboard-table td.team-name {
+  text-align: left;
+  background: #0a0a3a;
+  color: #ffd700;
+  letter-spacing: 0.08em;
+  padding-left: 1.25rem;
+  min-width: 120px;
+}
+
+.scoreboard-table td:not(.team-name) {
+  background: #000010;
+  color: #ffffff;
+  min-width: 50px;
+}
+
+.scoreboard-table tr.home-team td:not(.team-name) {
+  color: #ffd700;
+}
+
+/* Experience / Game Log cards */
+.page-baseball .experience-card,
+.page-baseball .education-card {
+  background: #0a0a30;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #ffd700;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.page-baseball .experience-meta {
+  color: #aaaadd;
+}
+
+.page-baseball .experience-list li {
+  color: #ccccee;
+}
+
+.page-baseball .experience-list li::before {
+  content: "⚾";
+  font-size: 0.55rem;
+  left: -1.3rem;
+  color: #ffd700;
+}
+
+.page-baseball .education-dates { color: #aaaadd; }
+
+/* Batting lineup — skill chips */
+.page-baseball .skills li {
+  background: #0a0a30;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-left: 4px solid #ffd700;
+  color: #ccccee;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.page-baseball .skills li:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  border-left-color: #ffd700;
+  color: #ffd700;
+}
+
+/* ============================================================
    SUPER MARIO BROS THEME — Projects page
    ============================================================ */
 .page-mario {

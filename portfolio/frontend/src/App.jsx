@@ -18,8 +18,8 @@ export default function App() {
         <nav className="nav">
           <div className="nav-links">
             <Link to="/">Home</Link>
-            <Link to="/projects">Projects 🏈</Link>
-            <Link to="/contact">Contact 🏈</Link>
+            <Link to="/projects">Projects 🍄</Link>
+            <Link to="/contact">Contact ⚡</Link>
           </div>
 
           <button
