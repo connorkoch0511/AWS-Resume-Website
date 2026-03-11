@@ -1,17 +1,10 @@
 import { Routes, Route, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ProjectDetail from "./pages/ProjectDetail";
 
 export default function App() {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-  }, [theme]);
-
   return (
     <>
       <div className="retro-bg retro-scanlines">
@@ -21,13 +14,6 @@ export default function App() {
             <Link to="/projects">Projects 🍄</Link>
             <Link to="/contact">Contact ⚡</Link>
           </div>
-
-          <button
-            className="theme-toggle"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            {theme === "dark" ? "☀️ Day Game" : "🌙 Night Game"}
-          </button>
         </nav>
 
         <Routes>
