@@ -40,12 +40,13 @@ export default function Projects() {
   };
 
   return (
+    <div className="page-mario">
     <div className="container">
       <div className="projects-header">
         <div>
-          <h1>Playbook</h1>
+          <h1>Level Select</h1>
           <p className="projects-subtitle">
-            Live demos, source code, and AWS-backed features you can try.
+            Choose your stage — live demos and AWS-backed features you can try.
           </p>
         </div>
 
@@ -107,6 +108,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

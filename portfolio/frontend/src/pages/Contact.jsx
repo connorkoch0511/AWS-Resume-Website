@@ -37,10 +37,30 @@ export default function Contact() {
   };
 
   return (
+    <div className="page-sf">
     <div className="container contact-page">
-      <h1>Call an Audible</h1>
+
+      <div className="sf-versus">
+        <div className="sf-fighter">
+          <div className="sf-fighter-name p1">Connor</div>
+          <div className="sf-health-track">
+            <div className="sf-health-fill p1" />
+          </div>
+        </div>
+        <div className="sf-vs-badge">VS</div>
+        <div className="sf-fighter">
+          <div className="sf-fighter-name p2">Recruiter</div>
+          <div className="sf-health-track">
+            <div className="sf-health-fill p2" />
+          </div>
+        </div>
+      </div>
+
+      <div className="sf-round">⚡ ROUND 1 — FIGHT! ⚡</div>
+
+      <h1>Contact</h1>
       <p className="contact-subtitle">
-        Feel free to reach out — I’m always open to new opportunities and conversations.
+        Send your message. I’m always open to new opportunities and conversations.
       </p>
 
       <form onSubmit={handleSubmit} className="contact-form">
@@ -65,7 +85,7 @@ export default function Contact() {
         </div>
 
         <button type="submit" disabled={loading}>
-          {loading ? "Sending..." : "Send Message"}
+          {loading ? "Charging..." : "⚡ HADOUKEN! ⚡"}
         </button>
 
         {status === "success" && (
@@ -77,6 +97,7 @@ export default function Contact() {
           </p>
         )}
       </form>
+    </div>
     </div>
   );
 }
