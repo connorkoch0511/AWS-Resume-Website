@@ -12,10 +12,12 @@ export default function Home() {
             Software Engineer · AWS · Go · React
           </p>
           <p className="description">
-            Computer Science graduate with 2+ years of experience as an Oracle
-            software developer, transitioning into cloud-native and AWS-focused
-            development. Experienced in building serverless applications using
-            Go, React, AWS Lambda, API Gateway, and CloudFront.
+            Software Developer with 2+ years of experience developing, maintaining,
+            and integrating enterprise Oracle applications. Strong background in
+            Oracle APEX, PL/SQL, SQL, Python, JavaScript, and RESTful APIs, with
+            hands-on experience across EBS, OIC, FDI, and OCI. Proven ability to
+            deliver scalable solutions, automate processes, and support
+            business-critical systems in collaborative, agile environments.
           </p>
 
           <table className="scoreboard-table">
