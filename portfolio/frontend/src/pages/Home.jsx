@@ -35,7 +35,7 @@ export default function Home() {
                 <td>0</td>
               </tr>
               <tr>
-                <td className="team-name">VISITOR</td>
+                <td className="team-name">RECRUITER</td>
                 <td>0</td>
                 <td>3</td>
                 <td>2</td>

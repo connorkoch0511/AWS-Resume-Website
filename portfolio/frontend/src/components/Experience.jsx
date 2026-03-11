@@ -6,7 +6,7 @@ export default function Experience() {
       <div className="experience-card">
         <h3>Oracle Software Developer</h3>
         <p className="experience-meta">
-          C3 Business Solutions · November 2023 – Present
+          C3 Business Solutions · November 2023 – February 2026
         </p>
 
         <ul className="experience-list">
