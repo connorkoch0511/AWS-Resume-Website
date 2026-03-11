@@ -106,18 +106,7 @@ h3 {
   position: relative;
 }
 
-/* subtle grid */
-.retro-bg::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(var(--retro-grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--retro-grid) 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 0;
-}
+/* grid removed — replaced by scrolling field-bg */
 
 /* scanlines */
 .retro-scanlines::after {
@@ -638,6 +627,54 @@ section + section {
   font-size: 0.45rem;
   color: var(--accent-bright);
   letter-spacing: 0.05em;
+}
+
+/* ===== SCROLLING FOOTBALL FIELD BACKGROUND ===== */
+.field-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  /* Alternating grass stripes + yard lines as a single scrolling layer */
+  background-image:
+    /* Yard lines — white horizontal bars */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 116px,
+      rgba(255, 255, 255, 0.55) 116px,
+      rgba(255, 255, 255, 0.55) 122px
+    ),
+    /* Hash marks — short center marks between yard lines */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 57px,
+      rgba(255, 255, 255, 0.2) 57px,
+      rgba(255, 255, 255, 0.2) 60px
+    ),
+    /* Alternating grass strips */
+    repeating-linear-gradient(
+      to bottom,
+      #0c2e0c 0px,
+      #0c2e0c 60px,
+      #0f380f 60px,
+      #0f380f 120px
+    );
+  background-size: 100% 120px;
+  animation: scroll-field 5s linear infinite;
+}
+
+/* Dark overlay so content cards remain readable */
+.field-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+@keyframes scroll-field {
+  from { background-position: 0 0; }
+  to   { background-position: 0 120px; }
 }
 
 /* ===== RETRO CARD ===== */

@@ -15,6 +15,7 @@ export default function App() {
   return (
     <>
       <div className="retro-bg retro-scanlines">
+        <div className="field-bg" />
         <nav className="nav">
           <div className="nav-links">
             <Link to="/">Home</Link>
